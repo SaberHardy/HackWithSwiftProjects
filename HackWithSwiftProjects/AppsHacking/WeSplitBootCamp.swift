@@ -13,7 +13,19 @@ struct WeSplitBootCamp: View {
     @State private var numberOfpeople = 2.0
     @State private var tipPercentage = 20.0
     
-    let tipsPercentage = [10,15,20,25,0]
+    let tipPercentages = [0, 10, 15, 20, 25]
+    
+    var totalPerPerson: Double {
+        
+        let peopleCount = Double(numberOfpeople + 2)
+        let tipSelection = Double(tipPercentage)
+        
+        let tipValue = checkAmount / 100 * tipSelection
+        let grandTotal = checkAmount + tipValue
+        let amountPerPerson = grandTotal / peopleCount
+        
+        return amountPerPerson
+    }
     
     var body: some View {
         NavigationView {
@@ -35,8 +47,23 @@ struct WeSplitBootCamp: View {
                 }
                 
                 Section {
+                    
+                    Picker("Tip percentages", selection: $tipPercentage) {
+                        ForEach(tipPercentages, id: \.self) {
+                            Text($0, format: .percent)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    
+                } header: {
+                    Text("How much tips you want to put")
+                        .font(.body)
+                        .bold()
+                }
+                
+                Section {
                     Text(
-                        checkAmount,
+                        totalPerPerson,
                         format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 }
             }
