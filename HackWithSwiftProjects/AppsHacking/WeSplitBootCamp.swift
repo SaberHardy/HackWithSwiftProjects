@@ -11,7 +11,7 @@ struct WeSplitBootCamp: View {
     
     @State private var checkAmount = 0.0
     @State private var numberOfpeople = 2.0
-    @State private var tipPercentage = 20.0
+    @State private var tipPercentage = 10.0
     
     @FocusState private var amountIsFocused: Bool
     
@@ -27,6 +27,11 @@ struct WeSplitBootCamp: View {
         let amountPerPerson = grandTotal / peopleCount
         
         return amountPerPerson
+    }
+    
+    var totalAmount: Double {
+        let total = checkAmount + tipPercentage
+        return total
     }
     
     var body: some View {
@@ -70,11 +75,24 @@ struct WeSplitBootCamp: View {
                         totalPerPerson,
                         format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 } header: {
-                     Text("Results")
+                     Text("Amount per person")
                         .font(.body)
                         .bold()
                         .foregroundColor(.black)
                 }
+                // Total amount for the check
+                Section {
+                    Text(
+                        totalAmount,
+                        format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                } header: {
+                     Text("Total amount...")
+                        .font(.body)
+                        .bold()
+                        .foregroundColor(.black)
+                }
+                
+                
             }
             .navigationTitle("Navigation Form...")
             .toolbar {
