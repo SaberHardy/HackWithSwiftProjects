@@ -13,6 +13,8 @@ struct WeSplitBootCamp: View {
     @State private var numberOfpeople = 2.0
     @State private var tipPercentage = 20.0
     
+    @FocusState private var amountIsFocused: Bool
+    
     let tipPercentages = [0, 10, 15, 20, 25]
     
     var totalPerPerson: Double {
@@ -36,6 +38,7 @@ struct WeSplitBootCamp: View {
                         value: $checkAmount,
                         format: .currency(
                             code: Locale.current.currencyCode ?? "USD"))
+                    .focused($amountIsFocused)
                     .keyboardType(.decimalPad)
                     
                     Picker("Number of people..",
@@ -59,15 +62,29 @@ struct WeSplitBootCamp: View {
                     Text("How much tips you want to put")
                         .font(.body)
                         .bold()
+                        .foregroundColor(.black)
                 }
                 
                 Section {
                     Text(
                         totalPerPerson,
                         format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                } header: {
+                     Text("Results")
+                        .font(.body)
+                        .bold()
+                        .foregroundColor(.black)
                 }
             }
             .navigationTitle("Navigation Form...")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        amountIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
