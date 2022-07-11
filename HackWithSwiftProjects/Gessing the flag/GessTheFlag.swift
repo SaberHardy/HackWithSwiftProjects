@@ -54,6 +54,7 @@ struct GessTheFlag: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
+                            askQuestion()
                         } label: {
                             Image(countries[number])
                                 .renderingMode(.original)
@@ -73,13 +74,13 @@ struct GessTheFlag: View {
             }
 
         }
-        .alert(scoreTitle, isPresented: $showingScore) {
-            Button("Continue", action: askQuestion)
-        } message: {
-            Text("Your score is \(myScore)")
-                .foregroundColor(.white)
-                .font(.title.bold())
-        }
+//        .alert(scoreTitle, isPresented: $showingScore) {
+//            Button("Continue", action: askQuestion)
+//        } message: {
+//            Text("Your score is \(myScore)")
+//                .foregroundColor(.white)
+//                .font(.title.bold())
+//        }
     }
     
     func flagTapped(_ number: Int) {
