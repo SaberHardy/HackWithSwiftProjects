@@ -9,7 +9,10 @@ import SwiftUI
 
 struct GessTheFlag: View {
     
-    @State private var countries = ["Estonia", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
+    @State private var countries = ["Estonia", "Germany", "Ireland",
+                                    "Italy", "Nigeria", "Poland",
+                                    "Russia", "Spain", "UK", "US"].shuffled()
+    
     @State private var correctAnswer = Int.random(in: 0...2)
     @State private var showingScore = false
     @State private var scoreTitle = ""
@@ -22,25 +25,24 @@ struct GessTheFlag: View {
             //                           endPoint: .bottom)
             RadialGradient(
                 stops: [
-                    .init(color: Color(red:0.1, green: 0.2, blue: 0.45),
-                          location: 0.3),
-                    .init(color: Color(red: 0.76, green: 0.15, blue: 0.26),
-                          location: 0.3)
+                    .init(color: Color(red:0.1, green: 0.2, blue: 0.45), location: 0.3),
+                    .init(color: Color(red: 0.8, green: 0.2, blue: 0.26), location: 0.3)
                 ],
                 center: .top,
                 startRadius: 200,
-                endRadius: 400)
+                endRadius: 500)
             .ignoresSafeArea()
             
             VStack {
+                Spacer()
                 Text("Gess The Flag")
                     .font(.largeTitle.weight(.bold))
                     .foregroundColor(.white)
-                Spacer()
+                
                 VStack(spacing: 15)  {
                     VStack {
                         Text("Tap the flag of")
-                            .font(.subheadline.weight(.heavy))
+                            .font(.headline.weight(.heavy))
                             .foregroundColor(.black)
                         
                         Text(countries[correctAnswer])
