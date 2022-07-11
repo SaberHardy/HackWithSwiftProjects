@@ -11,7 +11,8 @@ import SwiftUI
 struct HackWithSwiftProjectsApp: App {
     var body: some Scene {
         WindowGroup {
-            WeSplitBootCamp()
+//            WeSplitBootCamp()
+            GessTheFlag()
         }
     }
 }

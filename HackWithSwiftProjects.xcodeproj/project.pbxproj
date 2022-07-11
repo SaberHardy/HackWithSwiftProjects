@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5F67C1287B6566002A9928 /* GessTheFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F67C0287B6566002A9928 /* GessTheFlag.swift */; };
 		FABF1266287867EB00C64E4B /* HackWithSwiftProjectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF1265287867EB00C64E4B /* HackWithSwiftProjectsApp.swift */; };
-		FABF1268287867EB00C64E4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF1267287867EB00C64E4B /* ContentView.swift */; };
 		FABF126A287867ED00C64E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF1269287867ED00C64E4B /* Assets.xcassets */; };
 		FABF126D287867ED00C64E4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF126C287867ED00C64E4B /* Preview Assets.xcassets */; };
 		FABF12752878845500C64E4B /* WeSplitBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF12742878845500C64E4B /* WeSplitBootCamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA5F67C0287B6566002A9928 /* GessTheFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GessTheFlag.swift; sourceTree = "<group>"; };
 		FABF1262287867EB00C64E4B /* HackWithSwiftProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackWithSwiftProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABF1265287867EB00C64E4B /* HackWithSwiftProjectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackWithSwiftProjectsApp.swift; sourceTree = "<group>"; };
-		FABF1267287867EB00C64E4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FABF1269287867ED00C64E4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABF126C287867ED00C64E4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FABF12742878845500C64E4B /* WeSplitBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitBootCamp.swift; sourceTree = "<group>"; };
@@ -34,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA5F67BF287B3970002A9928 /* Gessing the flag */ = {
+			isa = PBXGroup;
+			children = (
+				FA5F67C0287B6566002A9928 /* GessTheFlag.swift */,
+			);
+			path = "Gessing the flag";
+			sourceTree = "<group>";
+		};
 		FABF1259287867EB00C64E4B = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +61,8 @@
 		FABF1264287867EB00C64E4B /* HackWithSwiftProjects */ = {
 			isa = PBXGroup;
 			children = (
-				FABF1267287867EB00C64E4B /* ContentView.swift */,
 				FABF1265287867EB00C64E4B /* HackWithSwiftProjectsApp.swift */,
+				FA5F67BF287B3970002A9928 /* Gessing the flag */,
 				FABF12732878834500C64E4B /* AppsHacking */,
 				FABF1269287867ED00C64E4B /* Assets.xcassets */,
 				FABF126B287867ED00C64E4B /* Preview Content */,
@@ -148,9 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABF1268287867EB00C64E4B /* ContentView.swift in Sources */,
 				FABF1266287867EB00C64E4B /* HackWithSwiftProjectsApp.swift in Sources */,
 				FABF12752878845500C64E4B /* WeSplitBootCamp.swift in Sources */,
+				FA5F67C1287B6566002A9928 /* GessTheFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
