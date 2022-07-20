@@ -21,9 +21,9 @@ struct BetterRest: View {
         NavigationView {
             VStack {
                 Form {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("When dou want to wake up?")
-                            .font(.headline)
+                    Section("When do you want to wake up?") {
+//                        Text("When dou want to wake up?")
+//                            .font(.headline)
                         
                         DatePicker("Please choose time",
                                    selection: $wakeUp,
@@ -31,9 +31,9 @@ struct BetterRest: View {
 //                        .labelsHidden()
                     }
                     
-                    VStack(alignment: .leading, spacing: 10)  {
-                        Text("Desired amount of sleep")
-                            .font(.headline)
+                    Section("Desired amount of sleep") {
+//                        Text("Desired amount of sleep")
+//                            .font(.headline)
                         
                         Stepper("\(sleepAmount.formatted()) hours",
                                 value: $sleepAmount,
@@ -42,9 +42,9 @@ struct BetterRest: View {
                         )
                     }
                     
-                    VStack(alignment: .leading, spacing: 10)  {
-                        Text("Daily coffee intake")
-                            .font(.headline)
+                    Section("Daily coffee intake")  {
+//                        Text("Daily coffee intake")
+//                            .font(.headline)
                         Stepper(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 1...20)
                     }
                 }
