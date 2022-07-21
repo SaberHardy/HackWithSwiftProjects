@@ -11,7 +11,9 @@
 		FA0F2D2E2880608700FE6A8F /* ForUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2D2D2880608700FE6A8F /* ForUITests.swift */; };
 		FA1D0997288843CF00D0A109 /* BetterRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D0996288843CF00D0A109 /* BetterRest.swift */; };
 		FA1D099928885B6F00D0A109 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA1D099828885B6F00D0A109 /* SleepCalculator.mlmodel */; };
+		FA1D099C2888692700D0A109 /* WordScramble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D099B2888692700D0A109 /* WordScramble.swift */; };
 		FA5F67C1287B6566002A9928 /* GessTheFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F67C0287B6566002A9928 /* GessTheFlag.swift */; };
+		FA6359AD2889C2DA000FF1DF /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA6359AC2889C2DA000FF1DF /* start.txt */; };
 		FABF1266287867EB00C64E4B /* HackWithSwiftProjectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF1265287867EB00C64E4B /* HackWithSwiftProjectsApp.swift */; };
 		FABF126A287867ED00C64E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF1269287867ED00C64E4B /* Assets.xcassets */; };
 		FABF126D287867ED00C64E4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF126C287867ED00C64E4B /* Preview Assets.xcassets */; };
@@ -23,7 +25,9 @@
 		FA0F2D2D2880608700FE6A8F /* ForUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForUITests.swift; sourceTree = "<group>"; };
 		FA1D0996288843CF00D0A109 /* BetterRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRest.swift; sourceTree = "<group>"; };
 		FA1D099828885B6F00D0A109 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
+		FA1D099B2888692700D0A109 /* WordScramble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScramble.swift; sourceTree = "<group>"; };
 		FA5F67C0287B6566002A9928 /* GessTheFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GessTheFlag.swift; sourceTree = "<group>"; };
+		FA6359AC2889C2DA000FF1DF /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		FABF1262287867EB00C64E4B /* HackWithSwiftProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackWithSwiftProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABF1265287867EB00C64E4B /* HackWithSwiftProjectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackWithSwiftProjectsApp.swift; sourceTree = "<group>"; };
 		FABF1269287867ED00C64E4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 				FA1D099828885B6F00D0A109 /* SleepCalculator.mlmodel */,
 			);
 			path = WakeUpApp;
+			sourceTree = "<group>";
+		};
+		FA1D099A2888690800D0A109 /* WordScramble */ = {
+			isa = PBXGroup;
+			children = (
+				FA6359AC2889C2DA000FF1DF /* start.txt */,
+				FA1D099B2888692700D0A109 /* WordScramble.swift */,
+			);
+			path = WordScramble;
 			sourceTree = "<group>";
 		};
 		FA5F67BF287B3970002A9928 /* Gessing the flag */ = {
@@ -79,8 +92,9 @@
 		FABF1264287867EB00C64E4B /* HackWithSwiftProjects */ = {
 			isa = PBXGroup;
 			children = (
-				FA1D09952888439C00D0A109 /* WakeUpApp */,
 				FABF1265287867EB00C64E4B /* HackWithSwiftProjectsApp.swift */,
+				FA1D099A2888690800D0A109 /* WordScramble */,
+				FA1D09952888439C00D0A109 /* WakeUpApp */,
 				FA5F67BF287B3970002A9928 /* Gessing the flag */,
 				FABF12732878834500C64E4B /* AppsHacking */,
 				FABF1269287867ED00C64E4B /* Assets.xcassets */,
@@ -165,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABF126D287867ED00C64E4B /* Preview Assets.xcassets in Resources */,
+				FA6359AD2889C2DA000FF1DF /* start.txt in Resources */,
 				FABF126A287867ED00C64E4B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +193,7 @@
 			files = (
 				FA1D099928885B6F00D0A109 /* SleepCalculator.mlmodel in Sources */,
 				FA032656287E4D3900BB9E53 /* LogInTestDelete.swift in Sources */,
+				FA1D099C2888692700D0A109 /* WordScramble.swift in Sources */,
 				FA1D0997288843CF00D0A109 /* BetterRest.swift in Sources */,
 				FA0F2D2E2880608700FE6A8F /* ForUITests.swift in Sources */,
 				FABF1266287867EB00C64E4B /* HackWithSwiftProjectsApp.swift in Sources */,
